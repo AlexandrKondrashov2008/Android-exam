@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="?attr/colorSurface">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Новая задача"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="?attr/colorOnSurface"
+        android:layout_marginBottom="16dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Название"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxBackgroundColor="?attr/colorSurface"
+        app:hintTextColor="?attr/colorControlNormal">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/colorOnSurface"
+            android:inputType="textCapSentences" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Описание (необязательно)"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_marginTop="12dp"
+        app:boxBackgroundColor="?attr/colorSurface"
+        app:hintTextColor="?attr/colorControlNormal">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/colorOnSurface"
+            android:inputType="textCapSentences" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Приоритет"
+        android:textSize="14sp"
+        android:textColor="?attr/colorOnSurface"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp" />
+
+    <Spinner
+        android:id="@+id/spinner_priority"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/priority_array"
+        android:background="@android:drawable/editbox_dropdown_light_frame" />
+
+    <Button
+        android:id="@+id/button_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Выбрать дату напоминания"
+        android:backgroundTint="#757575"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/text_selected_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="#1976D2"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/button_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Сохранить"
+        android:backgroundTint="?attr/colorPrimary"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="24dp" />
+
+</LinearLayout>
